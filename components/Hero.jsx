@@ -63,7 +63,7 @@ const Hero = () => {
             Take an Exam <IconArrowRight />
           </Button>
         </div>
-        <Image src={hero} />
+        <Image src={hero} alt="hero" />
       </div>
     </section>
   );

@@ -75,7 +75,7 @@ const page = () => {
         </form>
       </div>
       <div className="bg-[#2B2D42] rounded-r-large w-1/2 pb-8	flex flex-col">
-        <Image src={Register} className="mt-6 ms-20" />
+        <Image src={Register} alt="register" className="mt-6 ms-20" />
         <h1 className="text-gray-100 text-7xl text-center font-bold ">
           Hello Student{" "}
         </h1>

@@ -168,7 +168,7 @@ const Page = () => {
             </div>
           </form>
         </div>
-        <Image src={meeting} className="me-24" />
+        <Image src={meeting} alt="meeting" className="me-24" />
       </div>
     </section>
   );
