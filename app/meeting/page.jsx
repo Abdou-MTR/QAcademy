@@ -14,7 +14,6 @@ import toast, { Toaster } from "react-hot-toast";
 const Page = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Your form submission logic here
     toast.success("Meeting Scheduled successfully!", { duration: 2000 });
   };
   const teachers = [

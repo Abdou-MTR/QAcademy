@@ -82,7 +82,6 @@ const Page = () => {
   const [userLogged, setUserLogged] = React.useState(false);
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
-    console.log("isLoggedIn:", isLoggedIn);
 
     if (!isLoggedIn || isLoggedIn === "false") {
       toast.error(`You are not logged in. Please login first.`);
