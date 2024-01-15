@@ -7,14 +7,26 @@ import {
   Textarea,
   Button,
 } from "@nextui-org/react";
+import { useRouter } from "next/navigation";
 
 import meeting from "@Images/Time management-cuate.svg";
 import toast, { Toaster } from "react-hot-toast";
 
 const Page = () => {
+  const router = useRouter();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    toast.success("Meeting Scheduled successfully!", { duration: 2000 });
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (!isLoggedIn || isLoggedIn !== "true") {
+      toast.error(`You are not logged in. Please login first.`);
+
+      router.push("/register");
+    } else {
+      toast.success("Meeting Scheduled successfully!", {
+        duration: 2000,
+      });
+    }
   };
   const teachers = [
     { name: "Dr Debach", id: "1" },
@@ -64,7 +76,7 @@ const Page = () => {
               size={"sm"}
               defaultItems={teachers}
               label="Select a teacher"
-              className="bg-[#D9D9D9] w-80 rounded-2xl flex justify-between"
+              className="bg-[#D9D9D9] w-80 rounded-xl flex justify-between"
             >
               {(item) => (
                 <AutocompleteItem
@@ -80,7 +92,7 @@ const Page = () => {
               size={"sm"}
               defaultItems={Modules}
               label="Select a Module"
-              className="bg-[#D9D9D9] mt-10 w-80 rounded-2xl flex justify-between"
+              className="bg-[#D9D9D9] mt-10 w-80 rounded-xl flex justify-between"
             >
               {(item) => (
                 <AutocompleteItem
@@ -98,7 +110,7 @@ const Page = () => {
                 label="Day"
                 value={selectedDay}
                 onChange={(value) => setSelectedDay(value)}
-                className="bg-[#D9D9D9] mt-10 w-28 rounded-2xl flex justify-between"
+                className="bg-[#D9D9D9] mt-10 w-28 rounded-xl flex justify-between"
               >
                 {days.map((day) => (
                   <AutocompleteItem
@@ -116,12 +128,12 @@ const Page = () => {
                 size={"sm"}
                 label="Month"
                 value={selectedMonth}
-                onChange={(value) => setSelectedDay(value)}
-                className="bg-[#D9D9D9] mt-10 ms-3 w-28 rounded-2xl flex justify-between"
+                onChange={(value) => setSelectedMonth(value)}
+                className="bg-[#D9D9D9] mt-10 ms-3 w-28 rounded-xl flex justify-between"
               >
                 {months.map((month) => (
                   <AutocompleteItem
-                    className="text-primary hover:text-gray-200"
+                    className="text-primary rounded-md hover:text-gray-200"
                     key={month.id}
                     value={month}
                   >

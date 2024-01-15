@@ -18,7 +18,7 @@ const page = () => {
   };
   return (
     <section className="my-10 flex flex-row rounded-md">
-      <div className="flex flex-col rounded-l-large w-1/2 bg-white">
+      <div className="flex flex-col rounded-l-3xl w-1/2 bg-white">
         {" "}
         <h1 className="text-primary mt-14  text-3xl text-center font-bold">
           Register Here
@@ -74,7 +74,7 @@ const page = () => {
           </div>
         </form>
       </div>
-      <div className="bg-[#2B2D42] rounded-r-large w-1/2 pb-8	flex flex-col">
+      <div className="bg-[#2B2D42] rounded-r-3xl w-1/2 pb-8	flex flex-col">
         <Image src={Register} alt="register" className="mt-6 ms-20" />
         <h1 className="text-gray-100 text-7xl text-center font-bold ">
           Hello Student{" "}
