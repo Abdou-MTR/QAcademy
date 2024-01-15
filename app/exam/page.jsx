@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Button } from "@nextui-org/react";
 import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import { RadioGroup, Radio } from "@nextui-org/react";
 
 import Link from "next/link";
 
@@ -101,30 +102,32 @@ const ExamPage = () => {
         recommend for the radio button selection?
       </p>
       <div className="ms-8 mt-4">
-        {choices.map((choice, index) => (
-          <div key={index} className="mb-4 ms-4">
-            <input
-              type="radio"
+        <RadioGroup className="me-2">
+          {choices.map((choice, index) => (
+            <Radio
               id={`choice_${index}_1`}
               name="choices1"
               value={choice.name}
               checked={selectedChoice1 === choice.name}
+              color="secondary"
+              className="ms-5 mb-2"
               onChange={() =>
                 handleRadioChange(choice.name, setSelectedChoice1, choice.note)
               }
-            />
-            <label
-              htmlFor={`choice_${index}_1`}
-              className={`${
-                istestsubmited && choice.note === 0 ? "text-rose-600" : ""
-              } ${
-                istestsubmited && choice.note === 0 ? "" : " text-gray-600"
-              } ms-5`}
             >
-              {choice.name}
-            </label>
-          </div>
-        ))}
+              {" "}
+              <div
+                className={`ms-4 ${
+                  istestsubmited && choice.note === 0 ? "text-rose-600" : ""
+                } ${
+                  istestsubmited && choice.note === 0 ? "" : " text-gray-600"
+                } `}
+              >
+                {choice.name}
+              </div>
+            </Radio>
+          ))}{" "}
+        </RadioGroup>
       </div>
       <p className="ms-8 text-[#4C4C4C] mt-8 text-md font-semibold w-5/6">
         <span className="font-black text-primary">Q2. </span>
@@ -133,30 +136,32 @@ const ExamPage = () => {
         users can receive notifications.
       </p>
       <div className="ms-8 mt-4">
-        {RadioChoices2.map((choice, index) => (
-          <div key={index} className="mb-4 ms-4">
-            <input
-              type="radio"
+        <RadioGroup className="me-2">
+          {RadioChoices2.map((choice, index) => (
+            <Radio
               id={`choice_${index}_2`}
               name="choices2"
+              color="secondary"
+              className="ms-5 mb-2"
               value={choice.name}
               checked={selectedChoice2 === choice.name}
               onChange={() =>
                 handleRadioChange(choice.name, setSelectedChoice2, choice.note)
               }
-            />
-            <label
-              htmlFor={`choice_${index}_2`}
-              className={`${
-                istestsubmited && choice.note === 0 ? "text-rose-600" : ""
-              } ${
-                istestsubmited && choice.note === 0 ? "" : " text-gray-600"
-              } ms-5`}
             >
-              {choice.name}
-            </label>
-          </div>
-        ))}
+              {" "}
+              <div
+                className={`ms-4 ${
+                  istestsubmited && choice.note === 0 ? "text-rose-600" : ""
+                } ${
+                  istestsubmited && choice.note === 0 ? "" : " text-gray-600"
+                } `}
+              >
+                {choice.name}
+              </div>
+            </Radio>
+          ))}{" "}
+        </RadioGroup>
       </div>
 
       <p className="ms-8 text-[#4C4C4C] mt-4 text-md font-semibold w-5/6">
@@ -165,30 +170,32 @@ const ExamPage = () => {
         the primary goal of usability testing in the context of HCI?
       </p>
       <div className="ms-8 mt-4">
-        {RadioChoices3.map((choice, index) => (
-          <div key={index} className="mb-4 ms-4">
-            <input
-              type="radio"
+        <RadioGroup className="me-2">
+          {RadioChoices3.map((choice, index) => (
+            <Radio
               id={`choice_${index}_3`}
               name="choices3"
               value={choice.name}
               checked={selectedChoice3 === choice.name}
+              color="secondary"
+              className="ms-5 mb-2"
               onChange={() =>
                 handleRadioChange(choice.name, setSelectedChoice3, choice.note)
               }
-            />
-            <label
-              htmlFor={`choice_${index}_3`}
-              className={`${
-                istestsubmited && choice.note === 0 ? "text-rose-600" : ""
-              } ${
-                istestsubmited && choice.note === 0 ? "" : " text-gray-600"
-              } ms-5`}
             >
-              {choice.name}
-            </label>
-          </div>
-        ))}
+              {" "}
+              <div
+                className={`ms-4 ${
+                  istestsubmited && choice.note === 0 ? "text-rose-600" : ""
+                } ${
+                  istestsubmited && choice.note === 0 ? "" : " text-gray-600"
+                } `}
+              >
+                {choice.name}
+              </div>
+            </Radio>
+          ))}{" "}
+        </RadioGroup>
       </div>
 
       <p className="ms-8 text-[#4C4C4C] mt-4 text-md font-semibold w-5/6">
@@ -197,30 +204,32 @@ const ExamPage = () => {
         considered principles of Gestalt psychology.
       </p>
       <div className="ms-8 mt-4">
-        {RadioChoices4.map((choice, index) => (
-          <div key={index} className="mb-4 ms-4">
-            <input
-              type="checkbox"
+        <RadioGroup className="me-2">
+          {RadioChoices4.map((choice, index) => (
+            <Radio
               id={`choice_${index}_4`}
               name="choices4"
               value={choice.name}
               checked={selectedChoice4 === choice.name}
+              color="secondary"
+              className="ms-5 mb-2"
               onChange={() =>
                 handleRadioChange(choice.name, setSelectedChoice4, choice.note)
               }
-            />
-            <label
-              htmlFor={`choice_${index}_2`}
-              className={`${
-                istestsubmited && choice.note === 0 ? "text-rose-600" : ""
-              } ${
-                istestsubmited && choice.note === 0 ? "" : " text-gray-600"
-              } ms-5`}
             >
-              {choice.name}
-            </label>
-          </div>
-        ))}
+              {" "}
+              <div
+                className={`ms-4 ${
+                  istestsubmited && choice.note === 0 ? "text-rose-600" : ""
+                } ${
+                  istestsubmited && choice.note === 0 ? "" : " text-gray-600"
+                } `}
+              >
+                {choice.name}
+              </div>
+            </Radio>
+          ))}{" "}
+        </RadioGroup>
       </div>
 
       <div className="flex flex-row ">
