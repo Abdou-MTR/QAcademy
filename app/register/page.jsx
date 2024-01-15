@@ -7,7 +7,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 import { Button, Input } from "@nextui-org/react";
 import { IconArrowNarrowLeft } from "@tabler/icons-react";
-const page = () => {
+const RegisterPage = () => {
   const router = useRouter();
 
   const handleSubmit = (e) => {
@@ -99,4 +99,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default RegisterPage;

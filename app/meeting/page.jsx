@@ -12,7 +12,7 @@ import { useRouter } from "next/navigation";
 import meeting from "@Images/Time management-cuate.svg";
 import toast, { Toaster } from "react-hot-toast";
 
-const Page = () => {
+const MeetingPage = () => {
   const router = useRouter();
 
   const handleSubmit = (e) => {
@@ -185,4 +185,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default MeetingPage;

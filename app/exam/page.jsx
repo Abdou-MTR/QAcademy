@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 import Link from "next/link";
 
-const Page = () => {
+const ExamPage = () => {
   const router = useRouter();
   const [userLogged, setUserLogged] = React.useState(false);
   useEffect(() => {
@@ -252,4 +252,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default ExamPage;
