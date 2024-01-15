@@ -6,7 +6,7 @@ import Nav from "@components/Navbar";
 export const metadata = {
   title: "QAcademy",
   description:
-    "Discover & Share Ai PromptsQAcademy is a user-friendly website tailored for third-year students, with the goal of simplifying the examination process. This interactive platform revolves around a Multiple-Choice Questionnaire",
+    "QAcademy is a user-friendly website tailored for third-year students, with the goal of simplifying the examination process. This interactive platform revolves around a Multiple-Choice Questionnaire",
 };
 
 const Rootlayout = ({ children }) => {
